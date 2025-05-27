@@ -8,6 +8,7 @@ type Props = {
   onRemove: (email: string) => void;
 };
 
+
 function EmployeeList({ users, role, onRemove }: Props) {
   return (
     <ul className="list-disc ml-5 space-y-1">
