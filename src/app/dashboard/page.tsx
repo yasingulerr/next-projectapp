@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/app/context/AuthContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 type Project = {
@@ -60,6 +61,15 @@ export default function DashboardPage() {
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-4">Dashboard</h1>
+
+            <Image
+        src="/proje-banner2.png"
+        alt="Proje Yönetim Sistemi"
+        width={400}
+        height={200}
+        className="rounded shadow mx-auto"
+        priority={false} // lazy loading aktif
+      />
       <p>Hoş geldin, {user.email}</p>
       <p>Rolün: {role}</p>
 
